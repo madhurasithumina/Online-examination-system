@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/online examination system/admin/admin_login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Admin Login</h1>
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <div class="input-group">
+                <label for="username">Admin Name:</label>
+                <input type="text" id="username" name="username" placeholder="Enter admin name" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            <div class="input-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <p id="error-message"></p>
+
+        <!-- Back to Main Menu Button -->
+        <div class="back-menu">
+            <button onclick="window.location.href='/online examination system/index.html'">Back to Main Menu</button>
+        </div>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+
+            if (username === "admin" && password === "1234") {
+                window.location.href = "/online examination system/admin/admin_dashboard.html";  // Redirect to admin dashboard
+                return false; // Prevent form submission
+            } else {
+                errorMessage.textContent = "Invalid admin name or password!";
+                errorMessage.style.color = "red";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

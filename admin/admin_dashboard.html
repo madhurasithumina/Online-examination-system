@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/online examination system/admin/dashboard.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>AdminPro</h2>
+        <ul>
+            <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="/online examination system/user/all_users.php"><i class="fas fa-users"></i> Users</a></li>
+            <li><a href="/online examination system/contact/contact_list.php"><i class="fas fa-chart-bar"></i> Contact</a></li>
+            <li><a href="/online examination system/feedback/feedback_list.php"><i class="fas fa-comments"></i> Feedback</a></li>
+            <li><a href="/online examination system/help/help_list.php"><i class="fas fa-life-ring"></i> Help & Support</a></li>
+            <li><a href="/online examination system/admin/admin_login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Welcome, Admin</h1>
+            <div class="user-wrapper">
+                <img src="/online examination system/images/admin.png" alt="Admin" class="admin-avatar">
+                <div>
+                    <h4>Admin Name</h4>
+                    <small>Super Admin</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Overview Cards -->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Users</h3>
+                <p>1200</p>
+            </div>
+            <div class="card">
+                <h3>New Feedback</h3>
+                <p>50</p>
+            </div>
+            <div class="card">
+                <h3>Pending Requests</h3>
+                <p>12</p>
+            </div>
+            <div class="card">
+                <h3>Support Tickets</h3>
+                <p>8</p>
+            </div>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="charts">
+            <div class="chart-container">
+                <canvas id="userGrowthChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="feedbackChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="recent-activity">
+            <h2>Recent Activity</h2>
+            <ul>
+                <li>User JohnDoe123 registered</li>
+                <li>New feedback received from JaneSmith</li>
+                <li>Help ticket #345 closed by support</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Chart.js Scripts -->
+    <script src="/online examination system/admin/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // User Growth Chart
+        const userGrowthCtx = document.getElementById('userGrowthChart').getContext('2d');
+        const userGrowthChart = new Chart(userGrowthCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'User Growth',
+                    data: [120, 150, 170, 210, 240, 300],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Feedback Chart
+        const feedbackCtx = document.getElementById('feedbackChart').getContext('2d');
+        const feedbackChart = new Chart(feedbackCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Positive', 'Neutral', 'Negative'],
+                datasets: [{
+                    label: 'Feedback',
+                    data: [35, 10, 5],
+                    backgroundColor: ['#4caf50', '#ffeb3b', '#f44336']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+
+</body>
+</html>

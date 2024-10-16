@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/online examination system/contact/contact.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+</head>
+<body>
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-info">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you! Reach out to us using the form below or connect with us on social media.</p>
+                <div class="info-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>1234 Example Street, City, Country</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+123 456 7890</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>support@example.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/?_rdc=1&_rdr"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://lk.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form id="contactForm" action="/online examination system/contact/submit_contact.php" method="POST" onsubmit="return validateForm()">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <p class="error-message" id="nameError">Name must be at least 2 characters long.</p>
+
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <p class="error-message" id="emailError">Please enter a valid email address.</p>
+
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    <p class="error-message" id="subjectError">Subject cannot be empty.</p>
+
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    <p class="error-message" id="messageError">Message must be at least 10 characters long.</p>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Embed -->
+    <section class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=...your-map-link..." width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to validate form inputs
+        function validateForm() {
+            let isValid = true;
+
+            // Validate Name
+            const name = document.getElementById('name');
+            const nameError = document.getElementById('nameError');
+            if (name.value.trim().length < 2) {
+                name.classList.add('error');
+                nameError.style.display = 'block';
+                isValid = false;
+            } else {
+                name.classList.remove('error');
+                nameError.style.display = 'none';
+            }
+
+            // Validate Email
+            const email = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/;
+            if (!email.value.match(emailPattern)) {
+                email.classList.add('error');
+                emailError.style.display = 'block';
+                isValid = false;
+            } else {
+                email.classList.remove('error');
+                emailError.style.display = 'none';
+            }
+
+            // Validate Subject
+            const subject = document.getElementById('subject');
+            const subjectError = document.getElementById('subjectError');
+            if (subject.value.trim() === "") {
+                subject.classList.add('error');
+                subjectError.style.display = 'block';
+                isValid = false;
+            } else {
+                subject.classList.remove('error');
+                subjectError.style.display = 'none';
+            }
+
+            // Validate Message
+            const message = document.getElementById('message');
+            const messageError = document.getElementById('messageError');
+            if (message.value.trim().length < 10) {
+                message.classList.add('error');
+                messageError.style.display = 'block';
+                isValid = false;
+            } else {
+                message.classList.remove('error');
+                messageError.style.display = 'none';
+            }
+
+            return isValid;
+        }
+
+        // Live validation as user types
+        document.getElementById('name').addEventListener('input', validateForm);
+        document.getElementById('email').addEventListener('input', validateForm);
+        document.getElementById('subject').addEventListener('input', validateForm);
+        document.getElementById('message').addEventListener('input', validateForm);
+    </script>
+</body>
+</html>

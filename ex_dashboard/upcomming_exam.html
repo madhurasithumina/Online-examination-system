@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Exams</title>
+</head>
+<body style="background-color: #f4f6f8; color: #333; font-family: 'Arial', sans-serif;">
+
+    <div style="max-width: 800px; margin: 40px auto; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        
+        <header style="text-align: center; margin-bottom: 40px;">
+            <h1 style="font-size: 36px; color: #2d3436;">Upcoming Exams</h1>
+            <p style="color: #636e72; font-size: 16px;">View your scheduled exams and start preparing!</p>
+        </header>
+
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; background-color: #00cec9; color: white;">Exam Name</th>
+                    <th style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; background-color: #00cec9; color: white;">Date</th>
+                    <th style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; background-color: #00cec9; color: white;">Duration</th>
+                    <th style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; background-color: #00cec9; color: white;">Status</th>
+                    <th style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; background-color: #00cec9; color: white;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; color: #2d3436;">Mathematics</td>
+                    <td style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; color: #2d3436;">2024-10-15</td>
+                    <td style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; color: #2d3436;">2 Hours</td>
+                    <td style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; color: white; background-color: #fdcb6e; border-radius: 5px; text-align: center; width: 100px;">Upcoming</td>
+                    <td>
+                        <button style="background-color: #0984e3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;" onclick="startExam('Mathematics')">Start</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; color: #2d3436;">Science</td>
+                    <td style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; color: #2d3436;">2024-10-20</td>
+                    <td style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; color: #2d3436;">1.5 Hours</td>
+                    <td style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; color: white; background-color: #fdcb6e; border-radius: 5px; text-align: center; width: 100px;">Upcoming</td>
+                    <td>
+                        <button style="background-color: #0984e3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;" onclick="startExam('Science')">Start</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; color: #2d3436;">History</td>
+                    <td style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; color: #2d3436;">2024-10-25</td>
+                    <td style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; color: #2d3436;">1 Hour</td>
+                    <td style="padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; color: white; background-color: #fdcb6e; border-radius: 5px; text-align: center; width: 100px;">Upcoming</td>
+                    <td>
+                        <button style="background-color: #0984e3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;" onclick="startExam('History')">Start</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function startExam(examName) {
+            alert("Starting " + examName + " exam!");
+            // Redirect to the exam page (update with actual page)
+            window.location.href = "/online examination system/exam/exam_register.php"; // Replace with actual exam page URL
+        }
+    </script>
+</body>
+</html>

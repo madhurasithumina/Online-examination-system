@@ -1,0 +1,113 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* Exam Container */
+.exam-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.exam-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.exam-header h1 {
+    font-size: 36px;
+    color: #2d3436;
+}
+
+.exam-header p {
+    color: #636e72;
+    font-size: 16px;
+}
+
+/* Table Styles */
+.exam-table {
+    margin-bottom: 40px;
+}
+
+.exam-table h2 {
+    margin-bottom: 20px;
+    color: #2d3436;
+    font-size: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #00cec9;
+    color: white;
+}
+
+td {
+    color: #2d3436;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+}
+
+/* Status Color */
+.status.upcoming {
+    background-color: #fdcb6e;
+    color: white;
+}
+
+.status.completed {
+    background-color: #00b894;
+    color: white;
+}
+
+/* Start Button */
+.start-btn {
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-btn:hover {
+    background-color: #74b9ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    th, td {
+        padding: 10px;
+    }
+
+    .exam-header h1 {
+        font-size: 28px;
+    }
+}

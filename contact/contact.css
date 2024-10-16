@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.contact-info h1 {
+    font-size: 32px;
+    color: #2c3e50;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.info-box {
+    margin-bottom: 30px;
+}
+
+.info-box i {
+    font-size: 24px;
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.info-box h3 {
+    font-size: 20px;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    font-size: 18px;
+    color: white;
+    background-color: #3498db;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background-color: #2980b9;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    background-color: #ecf0f1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-form form textarea {
+    height: 150px;
+}
+
+.contact-form form button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form form button:hover {
+    background-color: #2980b9;
+}
+
+/* Map Section */
+.map-section {
+    margin: 60px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+}

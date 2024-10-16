@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Results</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #4a4a4a;
+}
+
+p {
+    color: #7d7d7d;
+    font-size: 16px;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+td:hover {
+    background-color: #f1f1f1;
+}
+
+.summary {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.summary h2 {
+    color: #4CAF50; /* Green for total score and overall grade */
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #7d7d7d;
+}
+
+</style>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Your Exam Results</h1>
+            <p>Here are your results for the recent exam.</p>
+        </header>
+
+        <div class="results">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Score</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mathematics</td>
+                        <td>85</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Science</td>
+                        <td>78</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>History</td>
+                        <td>90</td>
+                        <td>A+</td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td>72</td>
+                        <td>B</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="summary">
+                <h2>Total Score: 325 / 400</h2>
+                <h2>Overall Grade: B+</h2>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 ExamPro | All Rights Reserved</p>
+        </footer>
+    </div>
+
+</body>
+</html>
